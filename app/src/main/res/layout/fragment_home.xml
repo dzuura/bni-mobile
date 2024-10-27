@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#FFFFFF"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/txt_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Selamat Malam, Daffa Zulfahmi Al-Ahyar"
+        android:textSize="12sp"
+        android:textColor="#777777"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/info_user"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginStart="-4dp"
+        android:src="@drawable/logo_bni"
+        app:layout_constraintTop_toBottomOf="@+id/txt_greeting"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_saldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Saldo"
+        android:textSize="16sp"
+        android:textColor="#252525"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="@id/info_user"/>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="6dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/txt_saldo"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/info_user"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/button_backround"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="Daffa Zulfahmi Al-Ahyar"
+            android:textSize="14sp"
+            android:textColor="#252525"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="126dp"
+            android:src="@drawable/copy"
+            app:layout_constraintTop_toTopOf="@+id/txt_name"
+            app:layout_constraintStart_toEndOf="@+id/txt_name"/>
+
+        <TextView
+            android:id="@+id/txt_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="BNI Taplus Muda | 7263-2938-2390-****"
+            android:textColor="#252525"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/baseline_arrow_down"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_detail"
+            app:layout_constraintStart_toEndOf="@+id/txt_detail"/>
+
+        <TextView
+            android:id="@+id/txt_rp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Rp"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail"
+            app:layout_constraintStart_toStartOf="@+id/txt_detail"/>
+
+        <TextView
+            android:id="@+id/nominal_saldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="********"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail"
+            app:layout_constraintStart_toEndOf="@+id/txt_rp"/>
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/baseline_visibility_off"
+            app:layout_constraintTop_toTopOf="@+id/txt_rp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_rp"
+            app:layout_constraintStart_toEndOf="@+id/nominal_saldo" />
+
+        <Button
+            android:id="@+id/btn_tarik_tunai"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="18dp"
+            android:text="Tarik Tunai"
+            android:textSize="11sp"
+            android:backgroundTint="#E16417"
+            app:layout_constraintTop_toBottomOf="@+id/txt_rp"
+            app:layout_constraintStart_toStartOf="@+id/txt_rp"/>
+
+        <Button
+            android:id="@+id/btn_setor_tunai"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:text="Setor Tunai"
+            android:textSize="11sp"
+            android:backgroundTint="#E16417"
+            app:layout_constraintTop_toTopOf="@+id/btn_tarik_tunai"
+            app:layout_constraintStart_toEndOf="@+id/btn_tarik_tunai"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_shortcut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Shortcut Kamu"
+        android:textSize="16sp"
+        android:textColor="#252525"
+        app:layout_constraintTop_toBottomOf="@+id/info_user"
+        app:layout_constraintStart_toStartOf="@+id/info_user"/>
+
+    <LinearLayout
+        android:id="@+id/shortcut1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_shortcut"
+        app:layout_constraintStart_toStartOf="@+id/info_user">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:paddingStart="8dp"
+            android:background="@drawable/button_backround"
+            android:drawableLeft="@drawable/transfer"
+            android:fontFamily="@font/poppins"
+            android:text="Transfer Uang"
+            android:textSize="12sp"
+            android:textAllCaps="false"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:paddingStart="8dp"
+            android:background="@drawable/button_backround"
+            android:drawableLeft="@drawable/card"
+            android:fontFamily="@font/poppins"
+            android:text="Virtual Account"
+            android:textSize="12sp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shortcut2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/shortcut1"
+        app:layout_constraintStart_toStartOf="@+id/shortcut1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:paddingStart="8dp"
+            android:background="@drawable/button_backround"
+            android:drawableLeft="@drawable/pulsa"
+            android:fontFamily="@font/poppins"
+            android:text="Pulsa / Data"
+            android:textSize="12sp"
+            android:textAllCaps="false"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:paddingStart="8dp"
+            android:background="@drawable/button_backround"
+            android:drawableLeft="@drawable/menu"
+            android:fontFamily="@font/poppins"
+            android:text="Menu Lengkap"
+            android:textSize="12sp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/insight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Insight BNI"
+        android:textSize="16sp"
+        android:textColor="#252525"
+        app:layout_constraintTop_toBottomOf="@+id/shortcut2"
+        app:layout_constraintStart_toStartOf="@+id/info_user"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/insight"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/insight"
+        app:layout_constraintStart_toStartOf="@+id/info_user">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="90dp"
+                android:src="@drawable/box1"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="-25dp"
+                android:src="@drawable/box2"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="-25dp"
+                android:src="@drawable/box3"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

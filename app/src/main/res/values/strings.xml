@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BNI Mobile</string>
+    <string-array name="nomor_rekening">
+        <item>123456789</item>
+        <item>987654321</item>
+        <item>112233445</item>
+    </string-array>
+</resources>

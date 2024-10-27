@@ -1,0 +1,253 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F4F4F4"
+    tools:context=".InboxFragment">
+
+    <TextView
+        android:id="@+id/txt_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Inbox"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_date1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Hari ini"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_header"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_message1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_backround"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_date1"
+        app:cardCornerRadius="8dp"
+        android:elevation="2dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img_icon1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_notifications"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_message1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Anda telah melakukan transfer sebesar Rp500.000 ke rekening 123456789 atas nama Budi Santoso."
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/img_icon1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txt_time1"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/txt_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hari ini, 17:47"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            app:layout_constraintStart_toEndOf="@id/img_icon1"
+            app:layout_constraintTop_toBottomOf="@id/txt_message1"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_message2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_backround"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_message1"
+        app:cardCornerRadius="8dp"
+        android:elevation="2dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img_icon2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_notifications"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_message2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Kini Anda dapat menikmati fitur baru di aplikasi kami, yaitu transfer instan ke e-wallet tanpa biaya tambahan."
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/img_icon2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txt_time2"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/txt_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hari ini, 12:35"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            app:layout_constraintStart_toEndOf="@id/img_icon2"
+            app:layout_constraintTop_toBottomOf="@id/txt_message2"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_date2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="20 Oktober"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/card_message2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_message3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_backround"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_date2"
+        app:cardCornerRadius="8dp"
+        android:elevation="2dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img_icon3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_notifications"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_message3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nikmati bunga tabungan lebih tinggi! Khusus untuk nasabah setia kami, dapatkan bunga hingga 5% per tahun dengan membuka rekening tabungan terbaru."
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/img_icon3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txt_time3"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/txt_time3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 Oktober, 15:28"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            app:layout_constraintStart_toEndOf="@id/img_icon3"
+            app:layout_constraintTop_toBottomOf="@id/txt_message3"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_date3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="12 Oktober"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/card_message3"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_message4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_backround"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_date3"
+        app:cardCornerRadius="8dp"
+        android:elevation="2dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img_icon4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_notifications"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_message4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Kami mendeteksi aktivitas login yang tidak biasa pada akun Anda. Jika ini bukan Anda, segera ubah kata sandi Anda atau hubungi layanan pelanggan kami."
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/img_icon4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txt_time4"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/txt_time4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 Oktober, 11:02"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            app:layout_constraintStart_toEndOf="@id/img_icon4"
+            app:layout_constraintTop_toBottomOf="@id/txt_message4"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
